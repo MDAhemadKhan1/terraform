@@ -7,6 +7,8 @@ variable "ami-id" {
 variable "instance_type" {
     # type = string
     # default = "t3.micro"
+    # use export TF_VAR_instance_type = "t3.small" to implemen environment variable
+    # unset TF_VAR_instance_type ="" to unset the value
 }
 
 variable "from_port" {
