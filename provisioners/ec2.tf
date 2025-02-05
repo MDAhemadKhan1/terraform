@@ -28,12 +28,12 @@ resource "aws_instance" "this" {
     ]
 }
 
-# provisioner "remote-exec" {
-#   when = destroy
-#     inline = [
-#       "sudo systemctl stop nginx"
-#     ]
-# }
+provisioner "remote-exec" {
+  when = destroy
+    inline = [
+      "sudo systemctl stop nginx"
+    ]
+}
 }
 
 
